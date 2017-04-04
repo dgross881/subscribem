@@ -12,6 +12,9 @@
   <div class='flash <%= type %>'>
     <%= message  %>
   </div>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %> 
+  <% end %>
 <% end  %>
 
 <%= yield %>
